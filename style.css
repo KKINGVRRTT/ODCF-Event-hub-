@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   white-space: nowrap;
   overflow-x: auto;
+  font-family: 'Magistral Bold';
 }
 
 .title {
@@ -54,14 +55,15 @@ body {
 }
 
 body.standalone .desc::after {
-  content: " (App Mode)";
+  content: " ";
   color: #00ff99;
   font-style: italic;
+  font-family: 'Magistral Bold';
 }
 
 @font-face {
   font-family: 'Magistral Bold';
-  src: url('/assets/fonts/magistral-bold.woff2') format('woff2');
+  src: url('assets/fonts/magistral-bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
