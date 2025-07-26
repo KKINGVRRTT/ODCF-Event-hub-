@@ -1,0 +1,5 @@
+<div class="event">
+      <img src="assets/od imgs/" alt="Events Icon" class="events-icon" />
+      <strong>EVENTNAME</strong> <span class="event-time">TIME</span>
+      <div class="event-recurring">Every Day</div>
+    </div>

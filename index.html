@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Orion Drift">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Orion Drift Event Hub</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Orion Drift Event Hub</h1>
+    <p class="desc">Welcome to the Unoffical ODCF event experience.</p>
+  </div>
+  <div class="events">
+    <div class="event">
+      <img src="assets/od imgs/WedScraprun.png" alt="Events Icon" class="events-icon" />
+      <strong>Drift Practice</strong> <span class="event-time">10:00 AM</span>
+      <div class="event-recurring">Every Saturday</div>
+    </div>
+    <div class="event">
+      <img src="assets/od imgs/SR_Friday.png" alt="Events Icon" class="events-icon" />
+      <strong>Scraprun Friday</strong> <span class="event-time">2 & 6 Pst</span>
+      <div class="event-recurring">Every Friday</div>
+  </div>
+
+  <script>
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      document.body.classList.add('standalone');
+    }
+  </script>
+</body>
+</html>
