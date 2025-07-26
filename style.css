@@ -4,11 +4,10 @@ body {
   background: linear-gradient(135deg, #ffffff, #ffffff);
   color: white;
   font-family: 'Magistral Bold';
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align to top */
-  height: 100vh;
-  overflow: hidden;
+  display: block;         /* Remove flex to allow normal scrolling */
+  height: auto;           /* Remove 100vh to allow full page height */
+  min-height: 100vh;      /* Ensure background covers full height */
+  overflow-y: auto;       /* Enable vertical scrolling */
 }
 
 .container {
@@ -93,7 +92,9 @@ body.standalone .desc::after {
   align-items: center;
   font-size: 1rem;
   word-break: break-word;
-  width: 100%;
+  width: 90%;         /* Make event boxes less wide */
+  max-width: 320px;   /* Limit the maximum width */
+  margin-bottom: 2rem; /* Add space between event boxes */
 }
 
 .event-time {
@@ -141,5 +142,26 @@ body.standalone .desc::after {
     padding: 0.6rem 0.5rem;
     font-size: 0.98rem;
     max-width: 100%;
+  }
+}
+
+/* Grid layout for larger screens */
+@media (min-width: 601px) {
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem 3rem; /* Increase gap between grid boxes */
+    justify-items: center;
+    align-items: start;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .event {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 0; /* Remove extra margin for grid layout */
   }
 }
